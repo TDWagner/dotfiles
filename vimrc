@@ -10,6 +10,13 @@ filetype indent plugin on
 " Enable syntax highlighting
 syntax on
 
+try
+	colorscheme desert
+catch
+endtry
+
+set background=dark
+
 " Better command-line completion
 set wildmenu
  
@@ -23,7 +30,25 @@ set hlsearch
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
- 
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw 
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+" Add a bit extra margin to the left
+set foldcolumn=1
+
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
 
@@ -71,10 +96,20 @@ set pastetoggle=<F11>
 "set shiftwidth=4
 "set softtabstop=4
 "set expandtab
+set smarttab
 
 " Indentation settings for using hard tabs for indent. Display tabs as
 " four characters wide.
 set shiftwidth=4
 set tabstop=4
 
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
