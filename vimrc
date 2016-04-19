@@ -22,6 +22,12 @@ set background=dark
 " Keeps cursor in middle of screen while scrolling
 set scrolloff=999
 
+" Relative numbering
+set relativenumber
+
+" Show a visual line under the cursor's current line
+set cursorline
+
 " Better command-line completion
 set wildmenu
  
@@ -104,6 +110,20 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
  nmap <c-s> :w<CR>
  imap <c-s> <Esc>:w<CR>a
 
+" Toggle between relative or absolute number lines
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+    else
+        set relativenumber
+    endif
+endfunction
+
+nnoremap <C-n> :call NumberToggle()<CR>
+
+" Show white space characters
+:set listchars=tab:>-,eol:¬,trail:~,extends:>,precedes:<
+:set list
 
 "------------------------------------------------------------
 " Indentation/wrap options 
