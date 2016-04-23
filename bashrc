@@ -12,3 +12,7 @@ alias gai="git add --interactive"
 alias gdc="git diff --cached"
 alias gl="git log"
 alias gs="git status"
+
+# Path manipulation
+PATH=$PATH:~/AppData/Local/Programs/Python
+export PATH
