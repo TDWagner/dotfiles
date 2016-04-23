@@ -22,9 +22,6 @@ set background=dark
 " Keeps cursor in middle of screen while scrolling
 set scrolloff=999
 
-" Relative numbering
-set relativenumber
-
 " Show a visual line under the cursor's current line
 set cursorline
 
@@ -109,6 +106,9 @@ imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
 " To save, press ctrl-s.
  nmap <c-s> :w<CR>
  imap <c-s> <Esc>:w<CR>a
+
+" Relative numbering
+set relativenumber
 
 " Toggle between relative or absolute number lines
 function! NumberToggle()
