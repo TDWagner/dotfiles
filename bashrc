@@ -1,5 +1,7 @@
 # bash aliases
 alias ll="ls -al"
+alias yi="sudo yum install"
+alias ai="sudo apt-get install"
 
 # Open Sublime Text from bash
 alias subl="~/Dropbox/Sublime/subl.exe"
