@@ -121,6 +121,10 @@ endfunction
 
 nnoremap <C-n> :call NumberToggle()<CR>
 
+" Makes gj/gk move by virtual lines when used without a count, and by physical lines when used with a count
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
 " Show white space characters
 :set listchars=tab:>-,eol:¬,trail:~,extends:>,precedes:<
 :set list

@@ -2,6 +2,10 @@
 
 A place to set up config files for bash, git, etc
 
+# Usage
+* git clone https://github.com/TDWagner/dotfiles.git
+* sh ./dotfiles/.make.sh
+
 # Plans
 
 * ~~create a bash script to automate setting up links to these config files~~ (found and stole)
