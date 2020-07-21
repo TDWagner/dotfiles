@@ -14,15 +14,19 @@ alias gl="git log"
 alias gs="git status"
 alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
-# Terminal annoyances
+# terminal annoyances
 stty -ixon                     # turn off flow control
 setterm -bfreq 0               # disable terminal beep
 
-# Path manipulation
+# default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# path manipulation
 PATH=$PATH:~/AppData/Local/Programs/Python
 export PATH
 
-# Prompt Style
+# prompt style
 PS1='\[\033]0;\u@\h: ${PWD//[^[:ascii:]]/?}\007\]' # set window title
 PS1="$PS1"'\n'                 # new line
 PS1="$PS1"'\[\033[32m\]'       # change to green
