@@ -3,9 +3,6 @@ alias ll="ls -al"
 alias yi="sudo yum install"
 alias ai="sudo apt-get install"
 
-# Open Sublime Text from bash
-alias subl="~/Dropbox/Sublime/subl.exe"
-
 # git shortcuts
 alias gc="git commit -m"
 alias ga="git add ."
@@ -15,6 +12,10 @@ alias gdc="git diff --cached"
 alias gl="git log"
 alias gs="git status"
 alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
+
+# Terminal annoyances
+stty -ixon                     # turn off flow control
+setterm -bfreq 0               # disable terminal beep
 
 # Path manipulation
 PATH=$PATH:~/AppData/Local/Programs/Python
