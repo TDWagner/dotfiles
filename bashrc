@@ -2,6 +2,7 @@
 alias ll="ls -al"
 alias yi="sudo yum install"
 alias ai="sudo apt-get install"
+alias brc=". ~/.bashrc"
 
 # git shortcuts
 alias gc="git commit -m"
