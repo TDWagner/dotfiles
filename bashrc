@@ -11,6 +11,7 @@ alias gai="git add --interactive"
 alias gdc="git diff --cached"
 alias gl="git log"
 alias gs="git status"
+alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
 # Terminal annoyances
 stty -ixon                     # turn off flow control
@@ -30,7 +31,11 @@ PS1="$PS1"'\w'                 # current working directory
 parse_git_branch() {           # add git branch to prompt
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+<<<<<<< HEAD
 PS1="$PS1"'\[\033[36m\]'        # change color to cyan
+=======
+PS1="$PS1"'\[\033[36m\]'       # change color to cyan
+>>>>>>> 383601cc60a43a6ba6f6cc415b643fcb117432c8
 PS1="$PS1"' $(parse_git_branch)' # git branch
 PS1="$PS1"'\[\033[0m\]'        # change color
 PS1="$PS1"'\n'                 # new line
